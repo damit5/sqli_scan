@@ -7,6 +7,7 @@ import requests
 import threading
 from color import *
 import sys
+import os
 
 vulnerables = []
 
@@ -64,10 +65,16 @@ class Scan:
             for sql_error in self.errors:
                 if sql_error.strip('\n') in content:
                     vulnerables.append(url.replace("'",''))
-                    printGreen ('[vulnerable]   ' + url.replace("'",''))
+                    if os.name == 'nt':
+                        printGreen ('[vulnerable]   ' + url.replace("'",''))
+                    else:
+                        print ("\033[1;32m" + '[vulnerable]   ' + url.replace("'",''))
                     #break
                     sys.exit(0)
-            printRed ('[invulnerable] ' + url.replace("'",''))
+            if os.name == 'nt'
+                printRed ('[invulnerable] ' + url.replace("'",''))
+            else:
+                print ("\033[0;31m" + '[invulnerable] ' + url.replace("'",''))
         except:
             pass
 

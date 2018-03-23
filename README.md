@@ -8,6 +8,14 @@ Sqli_Scan , 批量sql注入扫描器
 
 - python3
 
+## 下载
+```
+git clone https://github.com/damit5/sqli_scan.git
+
+cd sqli_scan
+
+pip install -r requirements.txt
+```
 
 ## 基本使用
 
@@ -33,6 +41,6 @@ optional arguments:
   -e search engine  the search engine you want to use. bing,yahoo,google
 ```
 
-`python sqli_scan.py -k inurl:php?id= -p 3 -e bing`
+> 执行 `python sqli_scan.py -k inurl:php?id= -p 3 -e bing`
 
 ![image](img/1.png)

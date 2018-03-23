@@ -4,10 +4,13 @@ Version : 0.0.1
 """
 import argparse
 import sys
+from color import *
+
 from libs import bing
 from libs import yahoo
+from libs import google
+
 from src import Scan
-from color import *
 
 def menu():
     parse = argparse.ArgumentParser()
@@ -16,7 +19,7 @@ def menu():
     parse.add_argument('-p',dest='page_num',metavar='5',
                        help="page of websites to look for in search engine")
     parse.add_argument('-e',dest='engine',metavar='search engine',
-                       help="the search engine you want to use.  bing,yahoo")
+                       help="the search engine you want to use.  bing,yahoo,google")
     args = parse.parse_args()
     return args
 
@@ -35,6 +38,9 @@ def main():
     elif engine == 'yahoo':
         instance = yahoo.Yahoo(keyword,page_num)
         links = (instance.yahoo())
+    elif engine == 'google':
+        instance = google.Google(keyword,page_num)
+        links = (instance.google())
 
     scan = Scan.Scan(links)
     scan.main()

@@ -30,7 +30,7 @@ optional arguments:
   -h, --help        show this help message and exit
   -k inurl:example  sql injection keyword
   -p 5              page of websites to look for in search engine
-  -e search engine  the search engine you want to use. bing,yahoo
+  -e search engine  the search engine you want to use. bing,yahoo,google
 ```
 
 `python sqli_scan.py -k inurl:php?id= -p 3 -e bing`

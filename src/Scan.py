@@ -71,7 +71,7 @@ class Scan:
                         print ("\033[1;32m" + '[vulnerable]   ' + url.replace("'",''))
                     #break
                     sys.exit(0)
-            if os.name == 'nt'
+            if os.name == 'nt':
                 printRed ('[invulnerable] ' + url.replace("'",''))
             else:
                 print ("\033[0;31m" + '[invulnerable] ' + url.replace("'",''))

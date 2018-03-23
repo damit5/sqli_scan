@@ -5,9 +5,9 @@ Version : 0.0.1
 
 import requests
 import threading
-from color import *
 import sys
 import os
+from color import *
 
 vulnerables = []
 

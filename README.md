@@ -44,3 +44,6 @@ optional arguments:
 > 执行 `python sqli_scan.py -k inurl:php?id= -p 3 -e bing`
 
 ![image](img/1.png)
+
+## 演示视频
+[![Demo](https://asciinema.org/a/171948.png)](https://asciinema.org/a/171948)

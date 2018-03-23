@@ -7,6 +7,8 @@ Sqli_Scan , 批量sql注入扫描器
 ## 依赖
 
 - python3
+- - requests
+- - bs4
 
 ## 下载
 ```

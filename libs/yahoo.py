@@ -42,8 +42,3 @@ class Yahoo:
                     if 'http' not in item:
                         item = 'http://' + item
                     yield item
-
-if __name__ == '__main__':
-    a = Yahoo('inurl:php?id=',3)
-    for i in a.yahoo():
-        print (i)
